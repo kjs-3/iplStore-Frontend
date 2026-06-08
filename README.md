@@ -1,16 +1,27 @@
-# React + Vite
+A full Stack IPL Jerseys and Caps E-Commerce Application using React.js
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+TECH STACK:
+react.js - Frontend Library
+react-router-dom -navigate from page to page
+axios - api calls to backend 
+css modules - component level styling
+bootstrap - UI styling
 
-Currently, two official plugins are available:
+FEATURES:
+User Registration and Login(HttpSession Based)
+Home Page -->Involves header , footer,section with categories and teams
+Product Page-->Listing all Products 
+Cart Management --->Involves Quantity Controls
+Address 
+Order History
+Admin DashBoard
+CRUD-->Products
+Listing of Users
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+How to Run:
+node.js
+Backend running on port 8080
 
-## React Compiler
+BACKEND REPOSITORY:
+https://github.com/kjs-3/iplStore-Backend.git
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
