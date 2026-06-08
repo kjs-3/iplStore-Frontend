@@ -1,0 +1,131 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* this pushes my hamburger to the corner*/
+    background: linear-gradient(135deg, #001f5b, #003366);
+    padding: 0 32px;
+    height: 64px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 23px;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 0.7px;
+}
+
+.logo span {
+    color: #ffd700;
+}
+
+.navlinks {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navlink {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 6px 13px;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.navlink:hover {
+    background: rgba(255, 255, 255, 0.5);
+    color: #ffd700
+}
+
+.cartbtn {
+    color: #ffd700;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 20px;
+    border: 1px solid #ffd700;
+    transition: background 0.2s;
+}
+
+.cartbtn:hover {
+    background: #ffd700;
+    color: #003366;
+}
+
+.userName {
+    color: #aac4ff;
+    font-size: 13px;
+    padding: 0 8px;
+}
+
+.logoutbtn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.logoutbtn:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* when its in desktop mode the hamburger menu will be not shown */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    /* color: white;
+    font-size: 20px;
+    cursor: pointer; */
+}
+
+@media(max-width:760px) {
+    .hamburger {
+        display: block;
+        /*setmenubar will become true*/
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .navlinks {
+        display: none;
+
+    }
+
+    .navlinks.open {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: #003366;
+        padding: 16px 24px;
+        gap: 12px;
+        z-index: 99;
+    }
+}
+
+.navlink,
+.cartbtn,
+.logoutbtn {
+    width: 100%;
+    text-align: left;
+}
