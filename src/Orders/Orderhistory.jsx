@@ -14,7 +14,7 @@ const Orderhistory = () => {
     const fetchorders = async () => {
         setloading(true);
         try {
-            const res = await axios.get(`http://localhost:8080/api/orders/userorders/${userId}`
+            const res = await axios.get(`https://iplstore-backend.onrender.com/api/orders/userorders/${userId}`
                 , { withCredentials: true }
             )
             setorders(res.data)
@@ -29,7 +29,7 @@ const Orderhistory = () => {
     }
     const cancelorder = async (orderid) => {
         try {
-            await axios.put(`http://localhost:8080/api/orders/cancelorder/${orderid}`, {},
+            await axios.put(`https://iplstore-backend.onrender.com/api/orders/cancelorder/${orderid}`, {},
                 { withCredentials: true }
             )
             toast.success('Order Cancelled')
