@@ -11,7 +11,7 @@ const AdminUsers = () => {
     const fetchusers = async () => {
         setloading(true);
         try {
-            const res = await axios.get(`http://localhost:8080/admin/users`, { withCredentials: true })
+            const res = await axios.get(`https://iplstore-backend.onrender.com/admin/users`, { withCredentials: true })
             setusers(res.data)
             // console.log(res.data);
         }
