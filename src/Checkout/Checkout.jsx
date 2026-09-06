@@ -29,8 +29,8 @@ const Checkout = () => {
         setloading(true);
         try {
             const [cartres, addressres] = await Promise.all([
-                axios.get(`http://localhost:8080/api/cart/getcartofuser/${userId}`, { withCredentials: true }),
-                axios.get(`http://localhost:8080/api/address/${userId}`, { withCredentials: true })
+                axios.get(`https://iplstore-backend.onrender.com/api/cart/getcartofuser/${userId}`, { withCredentials: true }),
+                axios.get(`https://iplstore-backend.onrender.com/api/address/${userId}`, { withCredentials: true })
             ])
             setcartItems(cartres.data);
             setaddress(addressres.data);
