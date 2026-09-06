@@ -187,7 +187,7 @@ const Products = () => {
                                     <>
                                         <div key={product.productId} className={styles.productcard}>
                                             <div className={styles.imgbox} onClick={() => nav(`/ products / ${product.productId} `)}>
-                                                <img src={`http://localhost:8080${product.imageUrl}`} alt={product.name}
+                                                <img src={`https://iplstore-backend.onrender.com${product.imageUrl}`} alt={product.name}
                                                     className={styles.productimg} onError={(e) => e.target.style.display = 'none'} />
                                                 < span className={styles.catelabel} >
                                                     {product.categoryName}
