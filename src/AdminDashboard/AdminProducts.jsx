@@ -33,7 +33,7 @@ const AdminProducts = () => {
     const fetchproducts = async () => {
         setloading(true)
         try {
-            const res = await axios.get(`https://iplstore-backend.onrender.com/admin/getallproducts`, { withCredentials: true })
+            const res = await axios.get(`https://iplstore-backend.onrender.com/api/products/admin/getallproducts`, { withCredentials: true })
             setproducts(res.data)
             console.log(res.data)
         }
