@@ -18,7 +18,7 @@ const Login = () => {
             return;
         }
         try {
-            const res = await axios.post('http://localhost:8080/api/auth/login',
+            const res = await axios.post(`https://iplstore-backend.onrender.com/api/auth/login',
                 { userEmail, userPassword }, { withCredentials: true });
             const user = res.data;
             console.log(user);
