@@ -84,13 +84,13 @@ const AdminProducts = () => {
             }
             if (editId) {
                 //update product
-                await axios.put(`https://iplstore-backend.onrender.com/api/products/admin/updateproduct/${editId}`, details,
+                await axios.put(`https://iplstore-backend.onrender.com/api/admin/products/updateproduct/${editId}`, details,
                     { withCredentials: true })
                 toast.success('Updated Product Successfully');
             }
             else {
                 //adding product
-                await axios.post(`https://iplstore-backend.onrender.com/api/products/admin/addproduct`, details
+                await axios.post(`https://iplstore-backend.onrender.com/api/admin/products/addproduct`, details
                     , { withCredentials: true }
                 )
                 toast.success('Added product Successfully')
@@ -107,7 +107,7 @@ const AdminProducts = () => {
     }
     const handleDelete = async (productId) => {
         try {
-            await axios.delete(`https://iplstore-backend.onrender.com/api/products/admin/deleteproduct/${productId}`
+            await axios.delete(`https://iplstore-backend.onrender.com/api/admin/products/deleteproduct/${productId}`
                 , { withCredentials: true }
             )
             toast.success('Product deleted successfully')
