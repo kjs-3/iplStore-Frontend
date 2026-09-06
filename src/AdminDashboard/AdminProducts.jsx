@@ -228,7 +228,7 @@ const AdminProducts = () => {
                                         <>
                                             <tr key={products.productId}>
                                                 <td className={styles.ideCell}>#{products.productId}</td>
-                                                <td><img src={`http://localhost:8080${products.imageUrl}`}
+                                                <td><img src={`https://iplstore-backend.onrender.com${products.imageUrl}`}
                                                     alt={products.name} className={styles.tableImg}
                                                     onError={(e) => e.target.style.display = 'none'} /></td>
                                                 <td className={styles.nameCell}>{products.name}</td>
