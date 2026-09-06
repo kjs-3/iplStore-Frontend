@@ -61,7 +61,7 @@ const Home = () => {
           <div className={styles.categorygrid}>
             <div className={styles.categorycard} onClick={() => gotocategory(1)}>
               <div className={styles.categoryimagebox}>
-                <img src="http://localhost:8080/images/categoryjersey.jpeg" alt="IPL Jerseys"
+                <img src="https://iplstore-backend.onrender.com/images/categoryjersey.jpeg" alt="IPL Jerseys"
                   className={styles.categoryimg} onError={(e) => {
                     e.target.style.display = "none";
                     e.target.nextSibling.style.display = "flex"
@@ -77,7 +77,7 @@ const Home = () => {
             </div>
             <div className={styles.categorycard} onClick={() => gotocategory(2)}>
               <div className={styles.categoryimagebox}>
-                <img src="http://localhost:8080/images/categorycap.jpeg" alt="IPL Caps" className={styles.categoryimg}
+                <img src="https://iplstore-backend.onrender.com/images/categorycap.jpeg" alt="IPL Caps" className={styles.categoryimg}
                   onError={(e) => {
                     e.target.style.display = "none";
                     e.target.nextSibling.style.display = "flex"
