@@ -11,7 +11,7 @@ const AdminOrders = () => {
     const fetchorders = async () => {
         setloading(true);
         try {
-            const res = await axios.get(`https://iplstore-backend.onrender.com/api/admin/getallorders`, { withCredentials: true })
+            const res = await axios.get(`https://iplstore-backend.onrender.com/api/admin/admin/getallorders`, { withCredentials: true })
             setorders(res.data)
             console.log(res.data)
         }
