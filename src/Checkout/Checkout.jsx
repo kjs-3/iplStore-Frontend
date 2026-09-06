@@ -139,7 +139,7 @@ const Checkout = () => {
                                     <div className={styles.itemlist}>
                                         {cartItems.map((items) => (
                                             <div key={items.cartId} className={styles.checkoutitem}>
-                                                <img src={`http://localhost:8080${items.imageUrl}`} alt={items.productName}
+                                                <img src={`https://iplstore-backend.onrender.com${items.imageUrl}`} alt={items.productName}
                                                     className={styles.itemimg} onError={(e) => e.target.style.display = 'none'} />
                                                 <div className={styles.iteminfo}>
                                                     <span className={styles.itemteam}>{items.teamName}</span>
