@@ -125,7 +125,7 @@ const Cart = () => {
                                     return (
                                         <div key={items.cartId} className={styles.cartitem}>
                                             <div className={styles.itemimg}>
-                                                <img src={`http://localhost:8080${items.imageUrl}`}
+                                                <img src={`https://iplstore-backend.onrender.com${items.imageUrl}`}
                                                     alt={items.productName}
                                                     onError={(e) => { e.target.style.display = 'none' }} />
                                             </div>
