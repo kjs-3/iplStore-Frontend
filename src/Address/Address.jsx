@@ -35,7 +35,7 @@ const Address = () => {
     const fetchAddress = async () => {
         setloading(true);
         try {
-            const res = await axios.get(`http://localhost:8080/api/address/${userId}`, { withCredentials: true })
+            const res = await axios.get(`https://iplstore-backend.onrender.com/api/address/${userId}`, { withCredentials: true })
             setaddress(res.data);
             // incase there is no address given by user show the form
             if (res.data.length === 0) {
@@ -73,7 +73,7 @@ const Address = () => {
         // }
         setsave(true); //gng to save an address so true
         try {
-            await axios.post(`http://localhost:8080/api/address/addaddress`, { ...form, userId: parseInt(userId) }, { withCredentials: true })
+            await axios.post(`https://iplstore-backend.onrender.com/api/address/addaddress`, { ...form, userId: parseInt(userId) }, { withCredentials: true })
             toast.success('Address saved successfully')
             setform({
                 userName: '',
@@ -98,7 +98,7 @@ const Address = () => {
     // to set default address
     const setdefault = async (addressId) => {
         try {
-            await axios.put(`http://localhost:8080/api/address/update/${addressId}/${userId}`, {}, { withCredentials: true })
+            await axios.put(`https://iplstore-backend.onrender.com/api/address/update/${addressId}/${userId}`, {}, { withCredentials: true })
             toast.success('Default address been added');
             setsave(false);
             fetchAddress();
@@ -109,7 +109,7 @@ const Address = () => {
     }
     const deleteaddr = async (addressId) => {
         try {
-            await axios.delete(`http://localhost:8080/api/address/delete/${addressId}`, { withCredentials: true })
+            await axios.delete(`https://iplstore-backend.onrender.com/api/address/delete/${addressId}`, { withCredentials: true })
             toast.success('Deleted Address')
             fetchAddress();
         }
