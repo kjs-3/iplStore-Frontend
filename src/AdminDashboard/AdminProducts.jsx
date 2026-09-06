@@ -33,7 +33,7 @@ const AdminProducts = () => {
     const fetchproducts = async () => {
         setloading(true)
         try {
-            const res = await axios.get(`http://localhost:8080/admin/getallproducts`, { withCredentials: true })
+            const res = await axios.get(`https://iplstore-backend.onrender.com/admin/getallproducts`, { withCredentials: true })
             setproducts(res.data)
             console.log(res.data)
         }
@@ -84,13 +84,13 @@ const AdminProducts = () => {
             }
             if (editId) {
                 //update product
-                await axios.put(`http://localhost:8080/api/products/admin/updateproduct/${editId}`, details,
+                await axios.put(`https://iplstore-backend.onrender.com/api/products/admin/updateproduct/${editId}`, details,
                     { withCredentials: true })
                 toast.success('Updated Product Successfully');
             }
             else {
                 //adding product
-                await axios.post(`http://localhost:8080/api/products/admin/addproduct`, details
+                await axios.post(`https://iplstore-backend.onrender.com/api/products/admin/addproduct`, details
                     , { withCredentials: true }
                 )
                 toast.success('Added product Successfully')
@@ -107,7 +107,7 @@ const AdminProducts = () => {
     }
     const handleDelete = async (productId) => {
         try {
-            await axios.delete(`http://localhost:8080/api/products/admin/deleteproduct/${productId}`
+            await axios.delete(`https://iplstore-backend.onrender.com/api/products/admin/deleteproduct/${productId}`
                 , { withCredentials: true }
             )
             toast.success('Product deleted successfully')
