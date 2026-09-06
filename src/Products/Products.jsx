@@ -51,17 +51,17 @@ const Products = () => {
         setloading(true);
         seterror('');
         try {
-            let url = "http://localhost:8080/api/products/getallproducts"; //backend base url if its all then this url will worl
+            let url = "https://iplstore-backend.onrender.com/api/products/getallproducts"; //backend base url if its all then this url will worl
             const hasCategory = selectedcategory != "All";
             const hasTeam = selectedteam != "All";
             if (hasCategory && hasTeam) { //used requestparam
-                url = `http://localhost:8080/api/products/filter?categoryId=${selectedcategory}&teamname=${selectedteam}`;
+                url = `https://iplstore-backend.onrender.com/api/products/filter?categoryId=${selectedcategory}&teamname=${selectedteam}`;
             }
             else if (hasCategory) {
-                url = `http://localhost:8080/api/products/getbycategory?categoryId=${selectedcategory}`;
+                url = `https://iplstore-backend.onrender.com/api/products/getbycategory?categoryId=${selectedcategory}`;
             }
             else if (hasTeam) {
-                url = `http://localhost:8080/api/products/getbyteam?teamname=${selectedteam}`; //usedpathvariable
+                url = `https://iplstore-backend.onrender.com/api/products/getbyteam?teamname=${selectedteam}`; //usedpathvariable
             }
             const res = await axios.get(url, { withCredentials: true })
             setproducts(res.data);
@@ -103,7 +103,7 @@ const Products = () => {
         setaddingId(products.productId);
         try {
             const logindata = { userId: Number(uId), productId: products.productId, quantity: 1 };
-            await axios.post('http://localhost:8080/api/cart/addtocart',
+            await axios.post('https://iplstore-backend.onrender.com/api/cart/addtocart',
                 logindata
                 , { withCredentials: true }
             );
