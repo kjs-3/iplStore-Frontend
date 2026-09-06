@@ -9,7 +9,7 @@ const Navbar = () => {
     const [menubar,setmenubar]=useState(false);
     const handlelogout=()=>{
         try{
-             axios.post('http://localhost:8080/api/auth/logout',{},{withCredentials:true})
+             axios.post('https://iplstore-backend.onrender.com/api/auth/logout',{},{withCredentials:true})
         }
         catch(error){
             console.log("logout is not happening check once");
