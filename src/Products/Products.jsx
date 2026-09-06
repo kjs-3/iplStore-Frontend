@@ -192,7 +192,7 @@ const Products = () => {
                                             ${product.imageUrl}`}
                                                     alt={product.name}
                                                     className={styles.productimg} onError={(e) =>{
-                                                        e.target.style.display = 'none'}} />
+                                                       console.log('failed',e.target.src)}} />
                                                 < span className={styles.catelabel} >
                                                     {product.categoryName}
                                                 </span >
