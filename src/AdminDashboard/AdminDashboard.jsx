@@ -13,7 +13,7 @@ const AdminDashboard = () => {
     const fetchdashboardstatus = async () => {
         setloading(true);
         try {
-            const res = await axios.get(`https://iplstore-backend.onrender.com/admin/dashboard`, { withCredentials: true })
+            const res = await axios.get(`https://iplstore-backend.onrender.com/api/admin/dashboard`, { withCredentials: true })
             console.log(res.data)
             setstatus(res.data)
         }
