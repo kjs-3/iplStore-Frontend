@@ -141,7 +141,7 @@ const Orderhistory = () => {
                                                 {orders.orderItemsResponseDtoList.map((orderitems) => {
                                                     return (
                                                         <div key={orderitems.orderitemsId} className={styles.orderItem}>
-                                                            <img src={`http://localhost:8080${orderitems.imageUrl}`}
+                                                            <img src={`https://iplstore-backend.onrender.com${orderitems.imageUrl}`}
                                                                 alt={styles.productName} className={styles.itemimg}
                                                                 onError={(e) => e.target.style.display = 'none'} />
                                                             <div className={styles.itemInfo}>
