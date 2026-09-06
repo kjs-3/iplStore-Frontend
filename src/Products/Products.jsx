@@ -52,6 +52,7 @@ const Products = () => {
         seterror('');
         try {
             let url = "https://iplstore-backend.onrender.com/api/products/getallproducts"; //backend base url if its all then this url will worl
+            console.log(url);
             const hasCategory = selectedcategory != "All";
             const hasTeam = selectedteam != "All";
             if (hasCategory && hasTeam) { //used requestparam
