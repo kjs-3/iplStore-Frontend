@@ -68,7 +68,7 @@ const Checkout = () => {
             };
 
             const res = await axios.post(
-                `http://localhost:8080/api/orders/placeorder`,
+                `https://iplstore-backend.onrender.com/api/orders/placeorder`,
                 payload,
                 { withCredentials: true }
             );
