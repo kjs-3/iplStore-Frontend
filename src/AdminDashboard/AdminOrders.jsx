@@ -11,7 +11,7 @@ const AdminOrders = () => {
     const fetchorders = async () => {
         setloading(true);
         try {
-            const res = await axios.get(`https://iplstore-backend.onrender.com/api/orders/admin/getallorders`, { withCredentials: true })
+            const res = await axios.get(`https://iplstore-backend.onrender.com/api/admin/orders/getallorders`, { withCredentials: true })
             setorders(res.data)
             console.log(res.data)
         }
@@ -25,7 +25,7 @@ const AdminOrders = () => {
     }
     const updateStatus = async (orderId, status) => {
         try {
-            await axios.put(`https://iplstore-backend.onrender.com/api/orders/admin/updateorderstatus/${orderId}`,
+            await axios.put(`https://iplstore-backend.onrender.com/api/admin/orders/updateorderstatus/${orderId}`,
                 { status },
                 { withCredentials: true }
             )
