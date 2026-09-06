@@ -6,7 +6,7 @@ const Register = () => {
     const [userName, setuserName] = useState("");
     const [userEmail, setuserEmail] = useState("");
     const [userPassword, setuserPassword] = useState("");
-    const [userPhonenumber, setuserPhonenumber] = useState();
+    const [userPhonenumber, setuserPhonenumber] = useState("");
     const [error, seterror] = useState("");
     const [success, setsuccess] = useState("");
     const [loading, setloading] = useState(false);
