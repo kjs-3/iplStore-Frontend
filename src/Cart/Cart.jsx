@@ -21,7 +21,7 @@ const Cart = () => {
     const fetchcart = async () => {
         setloading(true);
         try {
-            const res = await axios.get(`http://localhost:8080/api/cart/getcartofuser/${userId}`, { withCredentials: true });
+            const res = await axios.get(`https://iplstore-backend.onrender.com/api/cart/getcartofuser/${userId}`, { withCredentials: true });
             // console.log(res)
             setCartitems(res.data);
             console.log(cartItems);
@@ -36,7 +36,7 @@ const Cart = () => {
     }
     const increasequantity = async (cartId, currentquantity) => {
         try {
-            const res = await axios.put(`http://localhost:8080/api/cart/updatequantity/${cartId}?quantity=${currentquantity + 1}`,
+            const res = await axios.put(`https://iplstore-backend.onrender.com/api/cart/updatequantity/${cartId}?quantity=${currentquantity + 1}`,
                 {}, { withCredentials: true });
             setCartitems(prev => prev.map((items) => {
                 return items.cartId == cartId ? res.data : items;
@@ -54,7 +54,7 @@ const Cart = () => {
             removecart(cartId);
         }
         try {
-            const res = await axios.put(`http://localhost:8080/api/cart/updatequantity/${cartId}?quantity=${currentqty - 1}`, {}
+            const res = await axios.put(`https://iplstore-backend.onrender.com/api/cart/updatequantity/${cartId}?quantity=${currentqty - 1}`, {}
                 , { withCredentials: true }
             )
             setCartitems(prev => prev.map((items) => {
@@ -70,7 +70,7 @@ const Cart = () => {
     }
     const removecart = async (cartId) => {
         try {
-            await axios.delete(`http://localhost:8080/api/cart/deletecart/${cartId}`, { withCredentials: true })
+            await axios.delete(`https://iplstore-backend.onrender.com/api/cart/deletecart/${cartId}`, { withCredentials: true })
             setCartitems(prev => prev.filter((items) => {
                 return items.cartId != cartId
             })
